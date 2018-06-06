@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+  <script type="text/javascript">
+  function buttonClick (button){
+    alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", value равно " + button.value + ".");
+  }
+  var counter=0;
+  function OnMouseCounter(element){
+    counter++;
+    element.innerHTML = "На этот текст было наведено " + counter + " раз";
+  }
+  </script>
+</head>
+
+<body>
+<input type="button" name="b" value="Click me" onclick="buttonClick (this)"/>
+<span onmouseover="OnMouseCounter (this)">На этот текст было наведено 0 раз</span>
+</body>
+
+</html>

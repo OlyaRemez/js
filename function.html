@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>Начало документа...</p>
+  <script>
+function count() {
+  // переменные i,j не будут уничтожены по окончании цикла
+  for (var i = 0; i < 3; i++) {
+    var j = i * 2;
+  }
+
+  alert( i ); // i=3, последнее значение i, при нём цикл перестал работать
+  alert( j ); // j=4, последнее значение j, которое вычислил цикл
+}
+
+var userName = 'Вася';
+
+function showMessage() {
+  var message = 'Привет, я ' + userName;
+  alert(message);
+}
+
+showMessage(); // Привет, я Вася
+
+function showNames(from, text) {
+  if (text === undefined) {
+    text = 'текст не передан';
+  }
+
+  alert( from + ": " + text );
+}
+
+showNames("Маша", "Привет!"); // Маша: Привет!
+</script>
+
+  <p>...Конец документа</p>
+
+</body>
+
+</html>
