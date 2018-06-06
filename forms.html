@@ -4,39 +4,11 @@
 <head>
   <!-- Тег meta для указания кодировки -->
   <meta charset="utf-8">
-  <script type="text/javascript">
-function valid(form){
-    var fail = false;
-    var name = form.name.value;
-    var email = form.email.value;
-    var password = form.password.value;
-    var RePassword = form.RePassword.value;
-    var state = form.state.value;
-
-    var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
-
-    if(name == "" || name == " ")
-    fail = "Enter Name";
-    else if(email.split('@').length - 1 == 0)
-    fail = "Enter correct email";
-   // else if(adr_pattern.test(email)==false)
-  //  fail = "Enter email";
-    else if(password == "")
-    fail = "Enter password";
-    else if(password != RePassword)
-    fail = "Enter the same passwords";
-    else if(state == "")
-    fail = "Enter gender";
-    if(fail)
-    alert(fail);
-    else 
-    window.location = "http://google.com"
-}
-  </script>
+  <script src="forms.js"></script>
 </head>
 
 <body>
-<form action="" method="post" name="test" onsubmit="valid(this)">
+<form action="" method="post" name="test" onsubmit="return checkForm(this);">
     <label for="name">Name:</label>
     <input type="text" name="name" placeholder="Name" id="name" /><br />
     <label for="email">Email:</label>
