@@ -1,4 +1,4 @@
-export class Employee{
+export class Employee {
     private firstName: string;
     private lastName: string;
     private position: string;
@@ -10,23 +10,22 @@ export class Employee{
 };
 
 export class Employees {
-    protected employees: Employee[];
+    private employees: Employee[];
     constructor(employees: Employee[]){
         this.employees = employees;
     }
 
-    sayInformationAboutEmployees() {
+    printEmployees() {
+        console.log("Employees")
         console.log(this.employees);
-        console.log(`Total number of employees: ${this.employees.length}`);
+        console.log("");
     }
-
-    
 };
 
-export const first_employee = new Employee('first', 'name', 'manager');
-export const second_employee = new Employee('second', 'name', 'chef');
-export const third_employee = new Employee('third', 'name', 'bartender');
+export const firstEmployee = new Employee('first', 'name', 'manager');
+export const secondEmployee = new Employee('second', 'name', 'boss');
+export const thirdEmployee = new Employee('third', 'name', 'bartender');
 
-const employees = new Employees([first_employee, second_employee, third_employee]);
+const employees = new Employees([firstEmployee, secondEmployee, thirdEmployee]);
 
-employees.sayInformationAboutEmployees();
+employees.printEmployees();
