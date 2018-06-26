@@ -7,7 +7,7 @@ export class Employee {
         this.lastName = lastName;
         this.position = position;
     }
-};
+}
 
 export class Employees {
     private employees: Employee[];
@@ -15,17 +15,29 @@ export class Employees {
         this.employees = employees;
     }
 
-    printEmployees() {
+    add(k) {
+        this.employees.push(k);
+    }
+
+    remove(n) {
+        this.employees.splice(n, 1);
+    }
+
+    print() {
+        console.log("");
         console.log("Employees")
-        console.log(this.employees);
+        this.employees.forEach(function(element){
+            console.log(element);
+        })
+        console.log(`Total number of employees: ${this.employees.length}`);
         console.log("");
     }
-};
+}
 
 export const firstEmployee = new Employee('first', 'name', 'manager');
 export const secondEmployee = new Employee('second', 'name', 'boss');
 export const thirdEmployee = new Employee('third', 'name', 'bartender');
 
-const employees = new Employees([firstEmployee, secondEmployee, thirdEmployee]);
+export const employees = new Employees([firstEmployee, secondEmployee, thirdEmployee]);
 
-employees.printEmployees();
+employees.print();
