@@ -9,7 +9,4 @@ export class Kitchen {
     }
 }
 
-export const kitEmployee = new Employee('four', 'name', 'chef');
-export const kitchen = new Kitchen(kitEmployee);
-
 
