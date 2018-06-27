@@ -18,8 +18,9 @@ export class EmployeesManager {
     print() {
         console.log("");
         console.log("Employees")
-        this.employees.forEach(function(){
-            printEmployee();
+        this.employees.forEach(function(element){
+            //console.log(element);
+            printEmployee(element);
         })
         console.log(`Total number of employees: ${this.employees.length}`);
         console.log("");

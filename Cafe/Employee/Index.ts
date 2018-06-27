@@ -1,4 +1,4 @@
-import {Employee} from "./Employee"
+import {Employee, printEmployee} from "./Employee"
 import {EmployeesManager} from "./EmployeeManager"
 
 export const firstEmployee = new Employee('first', 'name', 'manager');

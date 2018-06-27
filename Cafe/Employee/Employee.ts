@@ -9,6 +9,6 @@ export class Employee {
     }
 }
 
-export function printEmployee(){
-    console.log(this.firstName, this.lastName, this.position);
+export function printEmployee(element){
+    console.log(element);
 }
