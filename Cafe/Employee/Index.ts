@@ -1,4 +1,4 @@
-import {Employee, printEmployee} from "./Employee"
+import {Employee} from "./Employee"
 import {EmployeesManager} from "./EmployeeManager"
 
 export const firstEmployee = new Employee('first', 'name', 'manager');
@@ -8,3 +8,5 @@ export const thirdEmployee = new Employee('third', 'name', 'bartender');
 export const employees = new EmployeesManager([firstEmployee, secondEmployee, thirdEmployee]);
 
 employees.print();
+employees.remove('first');
+console.log(this.employees);

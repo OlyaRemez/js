@@ -1,5 +1,4 @@
 import {Employee} from "./Employee"
-import {printEmployee} from "./Employee"
 
 export class EmployeesManager {
     private employees: Employee[];
@@ -11,18 +10,20 @@ export class EmployeesManager {
         this.employees.push(employee);
     }
 
-    remove(employee) {
-        this.employees.splice(employee, 1);
+    remove(FirstName) {
+        this.employees  = this.employees.filter(function(name) {
+            return name.getFirstName() !== FirstName;
+        });
     }
 
     print() {
         console.log("");
-        console.log("Employees")
+        console.log("Employees");
         this.employees.forEach(function(element){
-            //console.log(element);
-            printEmployee(element);
+          console.log(element.printEmployee());
         })
         console.log(`Total number of employees: ${this.employees.length}`);
         console.log("");
     }
 }
+

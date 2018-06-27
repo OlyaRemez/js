@@ -7,8 +7,13 @@ export class Employee {
         this.lastName = lastName;
         this.position = position;
     }
+
+    printEmployee(){
+        console.log(`Employee: ${this.firstName} ${this.lastName}, ${this.position}`);
+    }
+
+    getFirstName(){
+        return this.firstName;
+    }
 }
 
-export function printEmployee(element){
-    console.log(element);
-}
