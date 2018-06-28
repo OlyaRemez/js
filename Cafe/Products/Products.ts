@@ -7,8 +7,12 @@ export class Product {
         this.type = type;
         this.count = count;
     }
-}
 
-export function printProduct(){
-    console.log(this.name, this.type, this.number);
+    printProduct(){
+        console.log(`Product: ${this.name}, ${this.type}, ${this.count}`);
+    }
+
+    getName(){
+        return this.name;
+    }
 }

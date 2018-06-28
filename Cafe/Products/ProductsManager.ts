@@ -1,4 +1,4 @@
-import {Product, printProduct} from "./Products"
+import {Product} from "./Products"
 
 export class ProductsManager {
     private products: Product[];
@@ -10,16 +10,18 @@ export class ProductsManager {
         this.products.push(product);
     }
 
-    remove(product) {
-        this.products.splice(product, 1);
+    remove(Name) {
+        this.products  = this.products.filter(function(name) {
+            return name.getName() !== Name;
+        });
     }
 
     print() {
         console.log("");
         console.log("Products")
-        this.products.forEach(function(){
-            printProduct();
-        })
+        this.products.forEach(function(element){
+            console.log(element.printProduct());
+          })
         console.log(`Total number of products: ${this.products.length}`);
         console.log("");
     }
