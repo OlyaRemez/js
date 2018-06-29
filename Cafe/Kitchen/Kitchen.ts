@@ -17,6 +17,18 @@ export class Kitchen {
         this.products.push(product);
     }
 
+    removeEmployeeByName(Name){
+        this.employees = this.employees.filter(function(name){
+            return name.getFirstName() !== Name;
+        })
+    }
+
+    removeProductByName(Name){
+        this.products = this.products.filter(function(name){
+            return name.getName() !== Name;
+        })
+    }
+
     printEmployees() {
         console.log("");
         console.log("Employees on kitchen: ");

@@ -1,6 +1,7 @@
 import {Employee} from "../Employee/Employee"
 import {Product} from "../Products/Products"
 import {Kitchen} from "./Kitchen"
+import {employees} from "../Employee/Index"
 
 export const kitEmployeeOne = new Employee('four', 'name', 'chef');
 export const kitEmployeeTwo = new Employee('five', 'name', 'assistant chef');
@@ -15,5 +16,3 @@ kitchen.addProduct(second_product);
 kitchen.addProduct(third_product);
 kitchen.printEmployees();
 kitchen.printProducts();
-
-

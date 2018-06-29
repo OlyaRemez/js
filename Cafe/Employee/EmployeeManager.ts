@@ -26,4 +26,3 @@ export class EmployeesManager {
         console.log("");
     }
 }
-
