@@ -6,13 +6,13 @@ export class TableManager {
         this.tables = tables;
     }
 
-    add(table) {
+    add(table: Table) {
         this.tables.push(table);
     }
 
-    remove(Number) {
+    remove(numberTable: number) {
         this.tables  = this.tables.filter(function(number) {
-            return number.getNumber() !== Number;
+            return number.getNumber() !== numberTable;
         });
     }
 
@@ -20,7 +20,7 @@ export class TableManager {
         console.log("");
         console.log("Tables");
         this.tables.forEach(function(element){
-          console.log(element.printTable());
+          console.log(element.print());
         })
         console.log(`Total number of tables: ${this.tables.length}`);
         console.log("");
