@@ -1,6 +1,6 @@
-import {Table} from "./Furniture"
-import {TableManager} from "./FurnitureManager"
-import {Reservation} from "./Reservation";
+import { Table } from "./Furniture";
+import { TableManager } from "./FurnitureManager";
+import { Reservation } from "./Reservation";
 
 export const dateStartOne = new Date(2018, 0, 1, 3, 3, 4, 53);
 export const dateEndOne = new Date(2018, 0, 1, 5, 3, 4, 56);
@@ -18,5 +18,3 @@ firstTable.addReservation(reservationOne);
 firstTable.addReservation(reservationTwo);
 firstTable.removeReservation(reservationTwo);
 tables.print();
-
-

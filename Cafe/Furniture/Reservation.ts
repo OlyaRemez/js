@@ -1,21 +1,21 @@
 export class Reservation {
     private startTime: Date;
     private endTime: Date;
-    constructor(startTime: Date, endTime: Date){
+    constructor(startTime: Date, endTime: Date) {
         this.startTime = startTime;
         this.endTime = endTime;
-        return;   
+        return;
     }
 
-    getStartTime(){
+    getStartTime() {
         return this.startTime;
     }
 
-    getEndTime(){
+    getEndTime() {
         return this.endTime;
     }
 
-    print(){
+    print() {
         console.log(this.startTime, this.endTime);
     }
 }
